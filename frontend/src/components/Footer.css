@@ -1,0 +1,225 @@
+.footer {
+  background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+  color: var(--gray-300);
+  padding: 60px 0 20px;
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--primary) 50%, 
+    transparent 100%
+  );
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Brand Section */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #7C3AED;
+  margin-bottom: 8px;
+}
+
+.footer-logo .logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%) !important;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  font-size: 24px;
+}
+
+.footer-logo .logo-text {
+  color: #7C3AED !important;
+}
+
+.footer-logo .logo-purple {
+  color: #7C3AED !important;
+  -webkit-text-fill-color: #7C3AED;
+}
+
+.footer-desc {
+  color: var(--gray-400);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  color: var(--gray-400);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.social-link:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Footer Links */
+.footer-title {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--gray-400);
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--primary-light);
+  transform: translateX(4px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  color: var(--gray-500);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom-links a {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom-links a:hover {
+  color: var(--primary-light);
+}
+
+/* Dark theme overrides: footer text & social icons to black */
+.dark-theme .footer {
+  color: #000000;
+}
+
+.dark-theme .footer-desc,
+.dark-theme .footer-title,
+.dark-theme .footer-links a,
+.dark-theme .footer-bottom p,
+.dark-theme .footer-bottom-links a {
+  color: #000000;
+}
+
+.dark-theme .social-link {
+  color: #000000;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .social-link:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 40px 0 20px;
+    margin-top: 60px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,329 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--white);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--primary-light);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-slow), border-color var(--transition-slow), color var(--transition-slow);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #7C3AED;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.02);
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #7C3AED;
+  border-radius: var(--radius);
+  color: white;
+  font-size: 24px;
+  box-shadow: var(--shadow);
+}
+
+.logo-text {
+  display: flex;
+  gap: 4px;
+}
+
+.logo-purple {
+  color: #7C3AED;
+  font-weight: 800;
+}
+
+/* Right Side Actions */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: var(--gray-700);
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  background: var(--gray-100);
+  color: var(--primary);
+  transform: rotate(20deg);
+}
+
+.menu-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: var(--gray-700);
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all var(--transition-fast);
+}
+
+.menu-toggle-btn:hover {
+  background: var(--gray-100);
+  color: var(--primary);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Navigation Links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  border-radius: var(--radius);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background: var(--primary-ultra-light);
+}
+
+.nav-icon {
+  font-size: 18px;
+  color: white;
+}
+
+/* Navbar action icons (login/profile/logout) use brand purple */
+.navbar-actions .nav-link .nav-icon {
+  color: var(--primary);
+}
+
+/* Sign In button styling */
+.navbar-actions .nav-link {
+  color: white;
+}
+
+.navbar-actions .nav-link:hover {
+  color: var(--primary);
+  background: var(--primary-ultra-light);
+}
+
+/* Get Started button styling */
+.navbar-actions .btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #ffffff;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-actions .btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.navbar-actions .btn-primary:active {
+  transform: translateY(0);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: var(--accent);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 10px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary);
+  transition: all var(--transition-fast);
+}
+
+.logout-btn:hover {
+  color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+}
+
+/* Vertical Sidebar */
+.vertical-sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 280px;
+  height: calc(100vh - 80px);
+  background: var(--white);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid var(--primary-light);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+  overflow-y: auto;
+  transition: background-color var(--transition-slow), border-color var(--transition-slow), color var(--transition-slow);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 12px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gray-700);
+  border-radius: var(--radius);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  color: var(--primary);
+  background: var(--primary-ultra-light);
+  transform: translateX(4px);
+}
+
+.sidebar-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+}
+
+/* Scrollbar styling for sidebar */
+.vertical-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.vertical-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.vertical-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.vertical-sidebar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+/* Button sizes */
+.btn-sm {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 12px 16px;
+  }
+  
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .logo-text {
+    font-size: 1.25rem;
+  }
+  
+  .vertical-sidebar {
+    width: 250px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+
+
+
+
+
+

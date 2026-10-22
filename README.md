@@ -1447,7 +1447,7 @@ We welcome contributions! Here's how you can help:
 
 ### 📧 Contact
 
-- **Email:** prabhleen6003@gmail.com
+- **Email:**himanimahajan2709@gmail.com
 
 
 ---
@@ -1458,7 +1458,7 @@ We welcome contributions! Here's how you can help:
 
 If you find this project useful, please consider giving it a star ⭐
 
-Made with ❤️ by [Prabhleen Kaur]
+Made with ❤️ by [Himani Mahajan]
 
 [⬆ Back to Top](#-ai-powered-job-portal)
 
